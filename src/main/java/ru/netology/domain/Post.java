@@ -2,7 +2,7 @@ package ru.netology.domain;
 
 
 public class Post {
-    private int id;
+    private int postId;
     private int ownerId;
     private int fromId;
     private int createdBy;
@@ -27,12 +27,12 @@ public class Post {
     private boolean isFavourite;
 
 
-    public int getId() {
-        return id;
+    public int getPostId() {
+        return postId;
     }
 
-    public void setId(int Id) {
-        this.id = id;
+    public void setPostId(int postId) {
+        this.postId = postId;
     }
 
 
