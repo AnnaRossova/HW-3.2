@@ -3,76 +3,76 @@ package ru.netology.domain;
 
 public class Post {
     private int id;
-    private String author;
-    private String date;
-    private boolean complain;
-    private boolean saveToBookmarks;
+    private int ownerId;
+    private int fromId;
+    private int createdBy;
+    private int date;
     private String text;
-    private String likesView;
-    private int likesCount;
-    private boolean commentsInfo;
-    private String repostsView;
-    private int repostsCount;
-    private int views;
+    private int replyOwnerId;
+    private int replyPostId;
+    private int friendsOnly;
 
-    public int getId
+    private CommentsInfo commentsInfo;
+    private LikesInfo likesInfo;
+    private RepostsInfo repostsInfo;
+    private ViewsInfo viewsInfo;
+    private GeoInfo geoInfo;
 
-    {
+    private int signerId;
+    private boolean canPin;
+    private boolean canDelete;
+    private boolean canEdit;
+    private boolean isPinned;
+    private boolean markedAsAds;
+    private boolean isFavourite;
+
+
+    public int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(int Id) {
         this.id = id;
     }
 
 
-    public String getAuthor
-
-    {
-        return author;
+    public int getOwnerId() {
+        return ownerId;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
     }
 
 
-    public String getDate
+    public int getFromId() {
+        return fromId;
+    }
 
-    {
+    public void setFromId(int fromId) {
+        this.fromId = fromId;
+    }
+
+
+    public int getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(int createdBy) {
+        this.createdBy = createdBy;
+    }
+
+
+    public int getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(int date) {
         this.date = date;
     }
 
 
-    public boolean getComplain
-
-    {
-        return complain;
-    }
-
-    public void setComplain(boolean complain) {
-        this.complain = complain;
-    }
-
-
-    public boolean getSaveToBookmarks
-
-    {
-        return saveToBookmarks;
-    }
-
-    public void setSaveToBookmarks(boolean SaveToBookmarks) {
-        this.saveToBookmarks = saveToBookmarks;
-    }
-
-
-    public String getText
-
-    {
+    public String getText() {
         return text;
     }
 
@@ -81,72 +81,139 @@ public class Post {
     }
 
 
-    public String getLikesView
-
-    {
-        return likesView;
+    public int getReplyOwnerId() {
+        return replyOwnerId;
     }
 
-    public void setLikesView(String LikesView) {
-        this.likesView = likesView;
-    }
-
-
-    public int getLikesCount
-
-    {
-        return likesCount;
-    }
-
-    public void setLikesCount(int LikesCount) {
-        this.likesCount = LikesCount;
+    public void setReplyOwnerID(int replyOwnerID) {
+        this.replyOwnerId = replyOwnerID;
     }
 
 
-    public boolean getCommentsInfo
+    public int getReplyPostId() {
+        return replyPostId;
+    }
 
-    {
+    public void setReplyPostId(int replyPostId) {
+        this.replyPostId = replyPostId;
+    }
+
+
+    public int getFriendsOnly() {
+        return friendsOnly;
+    }
+
+    public void setFriendsOnly(int friendsOnly) {
+        this.friendsOnly = friendsOnly;
+    }
+
+
+    public CommentsInfo getCommentsInfo() {
         return commentsInfo;
     }
 
-    public void setCommentsInfo(boolean CommentsInfo) {
+    public void setCommentsInfo(CommentsInfo commentsInfo) {
         this.commentsInfo = commentsInfo;
     }
 
 
-    public String getRepostsView
-
-    {
-        return repostsView;
+    public LikesInfo getLikesInfo() {
+        return likesInfo;
     }
 
-    public void setrepostsView(String repostsView) {
-        this.repostsView = repostsView;
-    }
-
-
-    public int getRepostsCount
-
-    {
-        return repostsCount;
-    }
-
-    public void setRepostsCount(int repostsCount) {
-        this.repostsCount = repostsCount;
+    public void setLikesInfo(LikesInfo likesInfo) {
+        this.likesInfo = likesInfo;
     }
 
 
-    public int geViews
-
-    {
-        return views;
+    public repostsInfo getRepostsInfo() {
+        return repostsInfo;
     }
 
-    public void setViews(int views) {
-        this.views = views;
+    public void setRepostsInfo(RepostsInfo repostsInfo) {
+        this.repostsInfo = repostsInfo;
     }
+
+
+    public ViewsInfo getViewsInfo() {
+        return viewsInfo;
+    }
+
+    public void setViewsInfo(ViewsInfo viewsInfo) {
+        this.viewsInfo = viewsInfo;
+    }
+
+
+    public GeoInfo getGeoInfo() {
+        return geoInfo;
+    }
+
+    public void setGeoInfo(GeoInfo geoInfo) {
+        this.geoInfo = geoInfo;
+    }
+
+
+    public int getSignerId() {
+        return signerId;
+    }
+
+    public void setSignerId(int signerId) {
+        this.signerId = signerId;
+    }
+
+
+    public boolean getCanPin() {
+        return canPin;
+    }
+
+    public void setCanPin(boolean canPin) {
+        this.canPin = canPin;
+    }
+
+
+    public boolean getCanDelete() {
+        return canDelete;
+    }
+
+    public void setCanDelete(boolean canDelete) {
+        this.canDelete = canDelete;
+    }
+
+
+    public boolean getCanEdit() {
+        return canEdit;
+    }
+
+    public void setCanEdit(boolean canEdit) {
+        this.canEdit = canEdit;
+    }
+
+
+    public boolean getIsPinned() {
+        return isPinned;
+    }
+
+    public void setIsPinned(boolean isPinned) {
+        this.isPinned = isPinned;
+    }
+
+
+    public boolean getMarkedAsAds() {
+        return markedAsAds;
+    }
+
+    public void setMarkedAsAds(boolean markedAsAds) {
+        this.markedAsAds = markedAsAds;
+    }
+
+
+    public boolean getIsFavourite() {
+        return isFavourite;
+    }
+
+    public void setFavourite(boolean isFavourite) {
+       this.isFavourite = isFavourite;
+    }
+
 
 }
-
-
-
